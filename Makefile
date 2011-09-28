@@ -35,6 +35,6 @@ $(TARDIR): $(TARBALL)
 
 .PHONY: deb
 deb: $(TARDIR)
-	fpm -s dir -t deb -v $(VERSION) -n $(NAME)-autocargo -a $(ARCHITECTURE) --prefix $(PREFIX) -C $(TARDIR) . \
+	fpm -s dir -t deb -v $(VERSION) -n $(NAME)-custom -a $(ARCHITECTURE) --prefix $(PREFIX) -C $(TARDIR) . \
 	  --post-install $(POSTINSTALL)
 
